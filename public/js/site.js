@@ -6,7 +6,7 @@ $(document).ready(function() {
       $body = $('body'),
       $window = $(window),
       $popoverLink = $('[data-popover]'),
-      navOffsetTop = $nav.offset().top,
+      // navOffsetTop = $nav.offset().top,
       $document = $(document),
       entityMap = {
         "&": "&amp;",
@@ -18,7 +18,7 @@ $(document).ready(function() {
       }
 
   function init() {
-    $window.on('scroll', onScroll)
+    // $window.on('scroll', onScroll)
     $window.on('resize', resize)
     $popoverLink.on('click', openPopover)
     $document.on('click', closePopover)
@@ -36,7 +36,7 @@ $(document).ready(function() {
         'scrollTop': $target.offset().top-40
     }, 0, 'swing', function () {
         window.location.hash = target;
-        $(document).on("scroll", onScroll);
+        // $(document).on("scroll", onScroll);
     });
   }
 
@@ -66,14 +66,14 @@ $(document).ready(function() {
     onScroll()
   }
 
-  function onScroll() {
-    if(navOffsetTop < $window.scrollTop() && !$body.hasClass('has-docked-nav')) {
-      $body.addClass('has-docked-nav')
-    }
-    if(navOffsetTop > $window.scrollTop() && $body.hasClass('has-docked-nav')) {
-      $body.removeClass('has-docked-nav')
-    }
-  }
+  // function onScroll() {
+  //   if(navOffsetTop < $window.scrollTop() && !$body.hasClass('has-docked-nav')) {
+  //     $body.addClass('has-docked-nav')
+  //   }
+  //   if(navOffsetTop > $window.scrollTop() && $body.hasClass('has-docked-nav')) {
+  //     $body.removeClass('has-docked-nav')
+  //   }
+  // }
 
   function escapeHtml(string) {
     return String(string).replace(/[&<>"'\/]/g, function (s) {
