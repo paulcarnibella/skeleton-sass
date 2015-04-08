@@ -1,3 +1,9 @@
-# Skeleton
+# skeleton-sass
 
-Use `gulp s` to run it, then go to http://localhost:4000
+### Install
+
+Run `npm install`
+
+### Serve
+
+Use `gulp serve` or `gulp s` to run it
